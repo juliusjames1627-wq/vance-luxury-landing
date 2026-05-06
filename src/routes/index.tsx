@@ -1,26 +1,44 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Toaster } from "@/components/ui/sonner";
+import { Nav } from "@/components/landing/Nav";
+import { Hero } from "@/components/landing/Hero";
+import { Listings } from "@/components/landing/Listings";
+import { About } from "@/components/landing/About";
+import { Pillars } from "@/components/landing/Pillars";
+import { LeadForms } from "@/components/landing/LeadForms";
+import { Testimonials } from "@/components/landing/Testimonials";
+import { FAQ } from "@/components/landing/FAQ";
+import { FinalCTA } from "@/components/landing/FinalCTA";
+import { Footer } from "@/components/landing/Footer";
 
 export const Route = createFileRoute("/")({
   component: Index,
+  head: () => ({
+    meta: [
+      { title: "Elena Vance | Luxury Real Estate in Tri-Cities, WA" },
+      { name: "description", content: "Premier representation for luxury single-family homes in Richland, Kennewick, Pasco, and West Richland. Free home valuations and off-market access." },
+      { property: "og:title", content: "Elena Vance | Luxury Real Estate in Tri-Cities, WA" },
+      { property: "og:description", content: "White-glove real estate for high-ticket Tri-Cities homes." },
+    ],
+  }),
 });
 
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
+function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="min-h-screen bg-background text-foreground antialiased">
+      <Nav />
+      <main>
+        <Hero />
+        <Listings />
+        <About />
+        <Pillars />
+        <LeadForms />
+        <Testimonials />
+        <FAQ />
+        <FinalCTA />
+      </main>
+      <Footer />
+      <Toaster theme="dark" position="top-center" />
     </div>
   );
-}
-
-function Index() {
-  return <PlaceholderIndex />;
 }
