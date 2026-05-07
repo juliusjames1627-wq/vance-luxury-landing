@@ -9,10 +9,16 @@ export function FinalCTA() {
           Schedule a private consultation.
         </h2>
         <p className="mt-5 opacity-80 max-w-2xl mx-auto">
-          A 30-minute conversation — no pressure, complete confidentiality — to map out your next move.
+          A 30-minute conversation — no pressure, complete confidentiality — to map out your next
+          move.
         </p>
         <div className="mt-8">
-          <Button asChild size="lg" variant="secondary" className="h-12 px-8 text-base bg-background text-foreground hover:bg-background/90">
+          <Button
+            asChild
+            size="lg"
+            variant="secondary"
+            className="h-12 px-8 text-base bg-background text-foreground hover:bg-background/90"
+          >
             <a href="#valuation">Book a Consultation</a>
           </Button>
         </div>

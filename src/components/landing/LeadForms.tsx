@@ -51,10 +51,15 @@ export function LeadForms() {
     <section id="valuation" className="py-20 md:py-28 border-t border-border">
       <div className="max-w-4xl mx-auto px-5 md:px-8">
         <div className="text-center max-w-2xl mx-auto mb-10">
-          <p className="text-[11px] tracking-[0.3em] text-primary uppercase mb-3">05 — Start the Conversation</p>
-          <h2 className="font-display text-4xl md:text-5xl font-light text-foreground">Tell us about your move.</h2>
+          <p className="text-[11px] tracking-[0.3em] text-primary uppercase mb-3">
+            05 — Start the Conversation
+          </p>
+          <h2 className="font-display text-4xl md:text-5xl font-light text-foreground">
+            Tell us about your move.
+          </h2>
           <p className="mt-4 text-foreground/65">
-            Whether you're listing or looking, you'll hear back from Elena personally — typically within one business day.
+            Whether you're listing or looking, you'll hear back from Elena personally — typically
+            within one business day.
           </p>
         </div>
 
@@ -66,7 +71,9 @@ export function LeadForms() {
                 type="button"
                 onClick={() => setMode(m)}
                 className={`px-6 py-2 text-xs tracking-[0.2em] uppercase rounded-sm transition-colors ${
-                  mode === m ? "bg-primary text-primary-foreground" : "text-foreground/65 hover:text-foreground"
+                  mode === m
+                    ? "bg-primary text-primary-foreground"
+                    : "text-foreground/65 hover:text-foreground"
                 }`}
               >
                 {m === "seller" ? "I'm Selling" : "I'm Buying"}
@@ -105,7 +112,11 @@ function SellerForm({ addressRef }: { addressRef: React.RefObject<HTMLInputEleme
   }
 
   return (
-    <form onSubmit={onSubmit} className="bg-card border border-border rounded-sm p-6 md:p-9" noValidate>
+    <form
+      onSubmit={onSubmit}
+      className="bg-card border border-border rounded-sm p-6 md:p-9"
+      noValidate
+    >
       <h3 className="font-display text-2xl text-foreground mb-1">Get Your Free Home Valuation</h3>
       <p className="text-sm text-foreground/55 mb-6">For sellers — no obligation.</p>
       <Honeypot />
@@ -115,14 +126,26 @@ function SellerForm({ addressRef }: { addressRef: React.RefObject<HTMLInputEleme
         <Field name="phone" label="Phone" type="tel" required inputMode="tel" autoComplete="tel" />
         <Field name="city" label="City" autoComplete="address-level2" />
         <div className="sm:col-span-2">
-          <Field name="address" label="Property Address" required autoComplete="street-address" innerRef={addressRef} />
+          <Field
+            name="address"
+            label="Property Address"
+            required
+            autoComplete="street-address"
+            innerRef={addressRef}
+          />
         </div>
         <Field name="beds" label="Beds" inputMode="numeric" />
         <Field name="baths" label="Baths" inputMode="numeric" />
         <Field name="sqft" label="Approx. SqFt" inputMode="numeric" />
-        <SelectField name="timeline" label="Timeline" options={["Just exploring", "0–3 months", "3–6 months", "6–12 months", "12+ months"]} />
+        <SelectField
+          name="timeline"
+          label="Timeline"
+          options={["Just exploring", "0–3 months", "3–6 months", "6–12 months", "12+ months"]}
+        />
         <div className="sm:col-span-2">
-          <Label htmlFor="s-notes" className="text-foreground/75 text-xs tracking-wider uppercase">Notes</Label>
+          <Label htmlFor="s-notes" className="text-foreground/75 text-xs tracking-wider uppercase">
+            Notes
+          </Label>
           <Textarea id="s-notes" name="notes" rows={3} className="mt-2" />
         </div>
       </div>
@@ -157,9 +180,15 @@ function BuyerForm() {
   }
 
   return (
-    <form onSubmit={onSubmit} className="bg-card border border-border rounded-sm p-6 md:p-9" noValidate>
+    <form
+      onSubmit={onSubmit}
+      className="bg-card border border-border rounded-sm p-6 md:p-9"
+      noValidate
+    >
       <h3 className="font-display text-2xl text-foreground mb-1">Start Your Home Search</h3>
-      <p className="text-sm text-foreground/55 mb-6">For buyers — including off-market opportunities.</p>
+      <p className="text-sm text-foreground/55 mb-6">
+        For buyers — including off-market opportunities.
+      </p>
       <Honeypot />
       <div className="grid sm:grid-cols-2 gap-4">
         <Field name="fullName" label="Full Name" required autoComplete="name" />
@@ -168,9 +197,15 @@ function BuyerForm() {
         <Field name="area" label="Desired Area" placeholder="Richland, Kennewick…" />
         <Field name="priceRange" label="Price Range" placeholder="$1M – $2.5M" />
         <Field name="beds" label="Beds" inputMode="numeric" />
-        <SelectField name="timeline" label="Timeline" options={["Just exploring", "0–3 months", "3–6 months", "6–12 months", "12+ months"]} />
+        <SelectField
+          name="timeline"
+          label="Timeline"
+          options={["Just exploring", "0–3 months", "3–6 months", "6–12 months", "12+ months"]}
+        />
         <div className="sm:col-span-2">
-          <Label htmlFor="b-notes" className="text-foreground/75 text-xs tracking-wider uppercase">Must-Haves / Notes</Label>
+          <Label htmlFor="b-notes" className="text-foreground/75 text-xs tracking-wider uppercase">
+            Must-Haves / Notes
+          </Label>
           <Textarea id="b-notes" name="notes" rows={3} className="mt-2" />
         </div>
       </div>
@@ -181,16 +216,31 @@ function BuyerForm() {
   );
 }
 
-function Field({ name, label, type = "text", required, inputMode, placeholder, autoComplete, innerRef }: {
-  name: string; label: string; type?: string; required?: boolean;
-  inputMode?: "text" | "numeric" | "tel" | "email" | "url"; placeholder?: string;
-  autoComplete?: string; innerRef?: React.RefObject<HTMLInputElement | null>;
+function Field({
+  name,
+  label,
+  type = "text",
+  required,
+  inputMode,
+  placeholder,
+  autoComplete,
+  innerRef,
+}: {
+  name: string;
+  label: string;
+  type?: string;
+  required?: boolean;
+  inputMode?: "text" | "numeric" | "tel" | "email" | "url";
+  placeholder?: string;
+  autoComplete?: string;
+  innerRef?: React.RefObject<HTMLInputElement | null>;
 }) {
   const id = `f-${name}`;
   return (
     <div>
       <Label htmlFor={id} className="text-foreground/75 text-xs tracking-wider uppercase">
-        {label}{required && <span className="text-primary"> *</span>}
+        {label}
+        {required && <span className="text-primary"> *</span>}
       </Label>
       <Input
         id={id}
@@ -210,7 +260,9 @@ function SelectField({ name, label, options }: { name: string; label: string; op
   const id = `f-${name}`;
   return (
     <div>
-      <Label htmlFor={id} className="text-foreground/75 text-xs tracking-wider uppercase">{label}</Label>
+      <Label htmlFor={id} className="text-foreground/75 text-xs tracking-wider uppercase">
+        {label}
+      </Label>
       <select
         id={id}
         name={name}
@@ -218,7 +270,11 @@ function SelectField({ name, label, options }: { name: string; label: string; op
         className="mt-2 w-full h-9 rounded-sm bg-input/50 border border-border px-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
       >
         <option value="">Select…</option>
-        {options.map((o) => <option key={o} value={o}>{o}</option>)}
+        {options.map((o) => (
+          <option key={o} value={o}>
+            {o}
+          </option>
+        ))}
       </select>
     </div>
   );
@@ -226,7 +282,11 @@ function SelectField({ name, label, options }: { name: string; label: string; op
 
 function Honeypot() {
   return (
-    <div aria-hidden className="absolute left-[-9999px] w-px h-px overflow-hidden" style={{ position: "absolute" }}>
+    <div
+      aria-hidden
+      className="absolute left-[-9999px] w-px h-px overflow-hidden"
+      style={{ position: "absolute" }}
+    >
       <label>
         Website (leave empty)
         <input type="text" name="website" tabIndex={-1} autoComplete="off" defaultValue="" />
