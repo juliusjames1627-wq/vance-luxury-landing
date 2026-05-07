@@ -80,6 +80,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:creator", content: "@elenavance" },
       { name: "theme-color", content: "#ffffff" },
       { name: "robots", content: "index, follow" },
+      { title: "Lovable App" },
+      { property: "og:title", content: "Lovable App" },
+      { name: "twitter:title", content: "Lovable App" },
+      { name: "description", content: "A premium, responsive real estate landing page for luxury homes in Tri-Cities, WA." },
+      { property: "og:description", content: "A premium, responsive real estate landing page for luxury homes in Tri-Cities, WA." },
+      { name: "twitter:description", content: "A premium, responsive real estate landing page for luxury homes in Tri-Cities, WA." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/6fd4e992-0872-4885-b172-d76156ef0040/id-preview-6d8f00b1--75172a95-df21-494b-b7d4-4519f2cf45ca.lovable.app-1778126660271.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/6fd4e992-0872-4885-b172-d76156ef0040/id-preview-6d8f00b1--75172a95-df21-494b-b7d4-4519f2cf45ca.lovable.app-1778126660271.png" },
     ],
     links: [
       {
