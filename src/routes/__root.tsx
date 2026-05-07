@@ -7,7 +7,6 @@ import {
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
-import { Analytics } from "@vercel/analytics/react";
 
 import appCss from "../styles.css?url";
 
@@ -115,7 +114,6 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <Outlet />
-      <Analytics />
     </QueryClientProvider>
   );
 }

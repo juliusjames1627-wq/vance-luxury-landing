@@ -11,10 +11,5 @@ import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 export default defineConfig({
   tanstackStart: {
     server: { entry: "server" },
-    // If building on Vercel, we can try to force the vercel preset
-    // though the lovable config might still override it.
-  },
-  vite: {
-    // Additional vite config can go here
   },
 });
