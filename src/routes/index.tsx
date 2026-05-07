@@ -28,13 +28,28 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Premier representation for luxury single-family homes in Richland, Kennewick, Pasco, and West Richland. Free home valuations and off-market access.",
+          "Premier representation for luxury single-family homes in Richland, Kennewick, Pasco, and West Richland. Experience white-glove service and exclusive off-market access.",
+      },
+      {
+        name: "keywords",
+        content:
+          "luxury real estate Tri-Cities, Richland WA luxury homes, Elena Vance real estate, Kennewick waterfront property, Pasco luxury listings, West Richland real estate",
       },
       { property: "og:title", content: "Elena Vance | Luxury Real Estate in Tri-Cities, WA" },
       {
         property: "og:description",
-        content: "White-glove real estate for high-ticket Tri-Cities homes.",
+        content:
+          "Premier representation for luxury single-family homes in Tri-Cities. Experience white-glove service and exclusive off-market access.",
       },
+      { property: "og:image", content: "/og-image.png" },
+      { property: "og:url", content: "https://elenavance.com" },
+      { name: "twitter:title", content: "Elena Vance | Luxury Real Estate in Tri-Cities, WA" },
+      {
+        name: "twitter:description",
+        content:
+          "Premier representation for luxury single-family homes in Tri-Cities. Experience white-glove service and exclusive off-market access.",
+      },
+      { name: "twitter:image", content: "/og-image.png" },
     ],
     scripts: [
       {
