@@ -15,13 +15,9 @@ export function Ticker() {
             <span className="text-[10px] tracking-[0.2em] uppercase text-primary/60 mr-3">
               {deal.status}
             </span>
-            <span className="font-display text-sm font-medium text-foreground">
-              {deal.address}
-            </span>
+            <span className="font-display text-sm font-medium text-foreground">{deal.address}</span>
             <span className="mx-3 text-primary/30">/</span>
-            <span className="font-serif-accent text-sm text-primary">
-              {deal.price}
-            </span>
+            <span className="font-serif-accent text-sm text-primary">{deal.price}</span>
           </div>
         ))}
       </div>

@@ -85,20 +85,26 @@ export function ValuationModal({ open, onOpenChange, initialAddress = "" }: Valu
               </DialogHeader>
               <div className="space-y-6">
                 <div className="space-y-3">
-                  <Label className="text-xs uppercase tracking-widest text-foreground/40">Condition</Label>
+                  <Label className="text-xs uppercase tracking-widest text-foreground/40">
+                    Condition
+                  </Label>
                   <div className="grid grid-cols-2 gap-3">
-                    {["Exquisite", "Turn-key", "Lived-in", "Restoration Opportunity"].map((cond) => (
-                      <button
-                        key={cond}
-                        className="h-12 rounded-lg border border-primary/10 bg-white/50 hover:border-primary/40 hover:bg-primary/5 transition-all text-xs font-medium"
-                      >
-                        {cond}
-                      </button>
-                    ))}
+                    {["Exquisite", "Turn-key", "Lived-in", "Restoration Opportunity"].map(
+                      (cond) => (
+                        <button
+                          key={cond}
+                          className="h-12 rounded-lg border border-primary/10 bg-white/50 hover:border-primary/40 hover:bg-primary/5 transition-all text-xs font-medium"
+                        >
+                          {cond}
+                        </button>
+                      ),
+                    )}
                   </div>
                 </div>
                 <div className="space-y-3">
-                  <Label className="text-xs uppercase tracking-widest text-foreground/40">Your Timeline</Label>
+                  <Label className="text-xs uppercase tracking-widest text-foreground/40">
+                    Your Timeline
+                  </Label>
                   <div className="grid grid-cols-2 gap-3">
                     {["Immediate", "3-6 Months", "Exploring", "Estate Planning"].map((time) => (
                       <button

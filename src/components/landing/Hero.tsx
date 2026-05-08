@@ -20,7 +20,10 @@ export function Hero() {
   }
 
   return (
-    <section id="top" className="relative min-h-[100svh] flex flex-col justify-between overflow-hidden pt-16">
+    <section
+      id="top"
+      className="relative min-h-[100svh] flex flex-col justify-between overflow-hidden pt-16"
+    >
       <div className="absolute inset-0 overflow-hidden">
         <img
           src={heroSignature}
@@ -39,10 +42,12 @@ export function Hero() {
             Tri-Cities, WA · Signature Luxury Real Estate
           </p>
           <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-light leading-[0.98] text-foreground animate-in fade-in slide-in-from-bottom-6 duration-[1500ms] delay-200">
-            The final signature on your <span className="font-serif-accent text-primary">legacy</span>.
+            The final signature on your{" "}
+            <span className="font-serif-accent text-primary">legacy</span>.
           </h1>
           <p className="mt-6 md:mt-8 text-base md:text-lg text-foreground/70 max-w-xl leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-[1500ms] delay-500">
-            White-glove representation and off-market access for the most discerning buyers and sellers in Richland, Kennewick, and Pasco.
+            White-glove representation and off-market access for the most discerning buyers and
+            sellers in Richland, Kennewick, and Pasco.
           </p>
 
           <form
@@ -84,7 +89,7 @@ export function Hero() {
           </div>
         </div>
       </div>
-      
+
       <div className="relative w-full">
         <Ticker />
       </div>
