@@ -1,9 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import heroImg from "@/assets/hero-home.jpg";
+import heroSignature from "@/assets/hero-home.jpg";
 import { ArrowRight } from "lucide-react";
 import { useState } from "react";
 import { ValuationModal } from "./ValuationModal";
+
+import { Ticker } from "./Ticker";
 
 export function Hero() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -18,31 +20,29 @@ export function Hero() {
   }
 
   return (
-    <section id="top" className="relative min-h-[100svh] flex items-center overflow-hidden pt-16">
+    <section id="top" className="relative min-h-[100svh] flex flex-col justify-between overflow-hidden pt-16">
       <div className="absolute inset-0 overflow-hidden">
         <img
-          src={heroImg}
-          alt="Luxury Tri-Cities estate at golden hour"
+          src={heroSignature}
+          alt="Luxury fountain pen resting on a bespoke contract, symbolizing elite real estate service"
           width={1920}
           height={1080}
-          className="h-full w-full object-cover ken-burns"
+          className="h-full w-full object-cover ken-burns scale-110"
         />
       </div>
-      <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/30 to-background" />
-      <div className="absolute inset-0 bg-gradient-to-r from-background/85 via-background/40 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/20 to-background" />
+      <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/40 to-transparent" />
 
-      <div className="relative max-w-7xl mx-auto px-5 md:px-8 py-20 md:py-28 w-full">
+      <div className="relative max-w-7xl mx-auto px-5 md:px-8 py-20 md:py-28 w-full flex-1 flex items-center">
         <div className="max-w-2xl">
-          <p className="text-[11px] md:text-xs tracking-[0.3em] text-primary uppercase mb-6 animate-in fade-in slide-in-from-bottom-4 duration-1000">
-            Tri-Cities, WA · Luxury Single-Family Homes
+          <p className="text-[11px] md:text-xs tracking-[0.4em] text-primary uppercase mb-6 animate-in fade-in slide-in-from-bottom-4 duration-1000">
+            Tri-Cities, WA · Signature Luxury Real Estate
           </p>
-          <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-light leading-[0.98] text-foreground animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-200">
-            Where premier homes meet{" "}
-            <span className="font-serif-accent text-primary">discerning</span> buyers.
+          <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-light leading-[0.98] text-foreground animate-in fade-in slide-in-from-bottom-6 duration-[1500ms] delay-200">
+            The final signature on your <span className="font-serif-accent text-primary">legacy</span>.
           </h1>
-          <p className="mt-6 md:mt-8 text-base md:text-lg text-foreground/70 max-w-xl leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-300">
-            White-glove representation, off-market access, and data-driven results for high-ticket
-            single-family homes across Richland, Kennewick, Pasco, and West Richland.
+          <p className="mt-6 md:mt-8 text-base md:text-lg text-foreground/70 max-w-xl leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-[1500ms] delay-500">
+            White-glove representation and off-market access for the most discerning buyers and sellers in Richland, Kennewick, and Pasco.
           </p>
 
           <form
@@ -84,6 +84,11 @@ export function Hero() {
           </div>
         </div>
       </div>
+      
+      <div className="relative w-full">
+        <Ticker />
+      </div>
+
       <ValuationModal
         open={modalOpen}
         onOpenChange={setModalOpen}

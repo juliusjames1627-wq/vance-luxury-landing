@@ -45,10 +45,10 @@ export function ValuationModal({ open, onOpenChange, initialAddress = "" }: Valu
               </div>
               <DialogHeader className="text-left mb-6">
                 <DialogTitle className="font-display text-3xl font-light">
-                  Confirm your property
+                  Identify your property
                 </DialogTitle>
                 <DialogDescription className="text-foreground/60">
-                  We'll use this to pull recent comparable sales in your neighborhood.
+                  We'll prepare a bespoke analysis based on recent off-market and public sales.
                 </DialogDescription>
               </DialogHeader>
               <div className="space-y-4">
@@ -77,25 +77,41 @@ export function ValuationModal({ open, onOpenChange, initialAddress = "" }: Valu
               </div>
               <DialogHeader className="text-left mb-6">
                 <DialogTitle className="font-display text-3xl font-light">
-                  Tell us about your home
+                  Aesthetic & Motivation
                 </DialogTitle>
                 <DialogDescription className="text-foreground/60">
-                  Any major upgrades or unique features we should know about?
+                  Help us understand the unique positioning of your estate.
                 </DialogDescription>
               </DialogHeader>
               <div className="space-y-6">
-                <div className="grid grid-cols-2 gap-4">
-                  {["Excellent", "Good", "Fair", "Needs Work"].map((cond) => (
-                    <button
-                      key={cond}
-                      className="h-16 rounded-xl border border-primary/10 bg-white/50 hover:border-primary/40 hover:bg-primary/5 transition-all text-sm font-medium"
-                    >
-                      {cond}
-                    </button>
-                  ))}
+                <div className="space-y-3">
+                  <Label className="text-xs uppercase tracking-widest text-foreground/40">Condition</Label>
+                  <div className="grid grid-cols-2 gap-3">
+                    {["Exquisite", "Turn-key", "Lived-in", "Restoration Opportunity"].map((cond) => (
+                      <button
+                        key={cond}
+                        className="h-12 rounded-lg border border-primary/10 bg-white/50 hover:border-primary/40 hover:bg-primary/5 transition-all text-xs font-medium"
+                      >
+                        {cond}
+                      </button>
+                    ))}
+                  </div>
                 </div>
-                <Button onClick={nextStep} className="w-full h-12 rounded-xl text-base group">
-                  Final Step{" "}
+                <div className="space-y-3">
+                  <Label className="text-xs uppercase tracking-widest text-foreground/40">Your Timeline</Label>
+                  <div className="grid grid-cols-2 gap-3">
+                    {["Immediate", "3-6 Months", "Exploring", "Estate Planning"].map((time) => (
+                      <button
+                        key={time}
+                        className="h-12 rounded-lg border border-primary/10 bg-white/50 hover:border-primary/40 hover:bg-primary/5 transition-all text-xs font-medium"
+                      >
+                        {time}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+                <Button onClick={nextStep} className="w-full h-12 rounded-xl text-base group mt-4">
+                  Finalization{" "}
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </div>
@@ -109,10 +125,10 @@ export function ValuationModal({ open, onOpenChange, initialAddress = "" }: Valu
               </div>
               <DialogHeader className="text-left mb-6">
                 <DialogTitle className="font-display text-3xl font-light">
-                  Where should we send it?
+                  Secure Your Report
                 </DialogTitle>
                 <DialogDescription className="text-foreground/60">
-                  You'll receive a detailed market analysis within 24 hours.
+                  Your "White-Glove" valuation report will be delivered by Elena Vance personally.
                 </DialogDescription>
               </DialogHeader>
               <div className="space-y-4">
@@ -135,7 +151,7 @@ export function ValuationModal({ open, onOpenChange, initialAddress = "" }: Valu
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="email">Email Address</Label>
+                  <Label htmlFor="email">Preferred Email</Label>
                   <Input
                     id="email"
                     type="email"
@@ -143,8 +159,8 @@ export function ValuationModal({ open, onOpenChange, initialAddress = "" }: Valu
                     className="h-12 bg-white/50 border-primary/10 rounded-xl"
                   />
                 </div>
-                <Button className="w-full h-12 rounded-xl text-base bg-primary hover:bg-primary/90 text-primary-foreground group">
-                  Get My Free Valuation <Check className="ml-2 h-4 w-4" />
+                <Button className="w-full h-14 rounded-xl text-base bg-primary hover:bg-primary/90 text-primary-foreground group shadow-xl shadow-primary/20">
+                  Request White-Glove Report <Check className="ml-2 h-4 w-4" />
                 </Button>
               </div>
             </div>

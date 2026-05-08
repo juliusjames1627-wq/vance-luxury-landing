@@ -24,30 +24,30 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Elena Vance | Luxury Real Estate in Tri-Cities, WA" },
+      { title: "Elena Vance | Signature Luxury Real Estate in Tri-Cities, WA" },
       {
         name: "description",
         content:
-          "Premier representation for luxury single-family homes in Richland, Kennewick, Pasco, and West Richland. Experience white-glove service and exclusive off-market access.",
+          "The final signature on your legacy. Premier representation for luxury estates in Richland, Kennewick, and Pasco. Experience bespoke white-glove service.",
       },
       {
         name: "keywords",
         content:
-          "luxury real estate Tri-Cities, Richland WA luxury homes, Elena Vance real estate, Kennewick waterfront property, Pasco luxury listings, West Richland real estate",
+          "signature luxury real estate, Tri-Cities estates, Richland luxury homes, Elena Vance, bespoke real estate service, white-glove real estate Tri-Cities",
       },
-      { property: "og:title", content: "Elena Vance | Luxury Real Estate in Tri-Cities, WA" },
+      { property: "og:title", content: "Elena Vance | Signature Luxury Real Estate" },
       {
         property: "og:description",
         content:
-          "Premier representation for luxury single-family homes in Tri-Cities. Experience white-glove service and exclusive off-market access.",
+          "The final signature on your legacy. Premier representation for luxury estates in Tri-Cities, WA.",
       },
       { property: "og:image", content: "/og-image.png" },
       { property: "og:url", content: "https://elenavance.com" },
-      { name: "twitter:title", content: "Elena Vance | Luxury Real Estate in Tri-Cities, WA" },
+      { name: "twitter:title", content: "Elena Vance | Signature Luxury Real Estate" },
       {
         name: "twitter:description",
         content:
-          "Premier representation for luxury single-family homes in Tri-Cities. Experience white-glove service and exclusive off-market access.",
+          "Bespoke representation for luxury estates in Tri-Cities, WA. White-glove service for discerning buyers.",
       },
       { name: "twitter:image", content: "/og-image.png" },
     ],
