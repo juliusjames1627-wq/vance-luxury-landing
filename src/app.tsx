@@ -1,4 +1,5 @@
 import { Toaster } from "@/components/ui/sonner";
+import { Analytics } from "@vercel/analytics/react";
 import { Nav } from "@/components/landing/Nav";
 import { Hero } from "@/components/landing/Hero";
 import { Press } from "@/components/landing/Press";
@@ -44,6 +45,7 @@ export default function App() {
       <StickyMobileCTA />
       <FloatingTrustBadge />
       <Toaster position="top-center" />
+      <Analytics />
     </div>
   );
 }
