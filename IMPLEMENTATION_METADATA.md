@@ -15,6 +15,7 @@ The current default preview (Lovable/Bolt) will be replaced with a high-fidelity
 The app is a Vite SPA (not TanStack Router). Site-wide metadata lives in the document head.
 
 ### Implemented in `index.html`:
+
 - `viewport` & `charset` (essential)
 - `og:site_name`: "Elena Vance Luxury Real Estate"
 - `og:type`: "website"
@@ -24,6 +25,7 @@ The app is a Vite SPA (not TanStack Router). Site-wide metadata lives in the doc
 ## 3. Page-Specific Optimization (landing — `index.html`)
 
 ### Metadata specification (live):
+
 - **Title**: `Elena Vance | Luxury Real Estate in Tri-Cities, WA`
 - **Description**: `Premier representation for luxury single-family homes in Richland, Kennewick, Pasco, and West Richland. Experience white-glove service and exclusive off-market access.`
 - **Keywords**: `luxury real estate Tri-Cities, Richland WA luxury homes, Elena Vance real estate, Kennewick waterfront property, Pasco luxury listings` (+ West Richland)
